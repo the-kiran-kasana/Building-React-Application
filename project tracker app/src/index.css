@@ -1,0 +1,41 @@
+
+
+
+:root { --bg: #0b0e14; --panel:#121826; --muted:#8b8fa3; --text:#e6e9f2; --brand:#4f80ff; --danger:#ff5d5d; }
+
+* { box-sizing: border-box; }
+body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+
+a { color: inherit; text-decoration: none; }
+input, textarea, select, button {
+  background: #0f1422; color: var(--text); border: 1px solid #273049;
+  padding: 10px 12px; border-radius: 10px; font: inherit; outline: none;
+}
+input::placeholder, textarea::placeholder { color: #8b8fa3; }
+
+.btn { background: var(--brand); border: none; padding: 10px 14px; border-radius: 12px; color: white; cursor: pointer; }
+.btn.ghost { background: transparent; border: 1px solid #2c3550; }
+.btn.danger { background: var(--danger); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.nav { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #20263a; position: sticky; top: 0; background: rgba(11,14,20,.8); backdrop-filter: blur(6px); z-index: 10; }
+.brand { font-weight: 700; }
+.spacer { flex: 1; }
+
+.page { max-width: 960px; margin: 20px auto; padding: 0 16px; }
+.card { background: var(--panel); border: 1px solid #1c2336; padding: 16px; border-radius: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.row { display: flex; gap: 10px; align-items: center; }
+.header-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+
+.filters { display: flex; gap: 10px; align-items: center; margin: 12px 0; }
+.list { display: grid; gap: 8px; margin: 12px 0; padding: 0; list-style: none; }
+.item { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: var(--panel); border:1px solid #1c2336; padding: 12px; border-radius: 14px; }
+.item.done .task-title { text-decoration: line-through; color: var(--muted); }
+
+.muted { color: var(--muted); }
+.tiny { color: var(--muted); font-size: 12px; }
+.empty { opacity: .8; padding: 24px; text-align: center; border: 1px dashed #28314a; border-radius: 16px; }
+
+.auth { max-width: 420px; margin-top: 60px; }
+.pagination { display: flex; align-items: center; gap: 10px; justify-content: flex-end; margin-top: 8px; }
