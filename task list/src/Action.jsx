@@ -12,8 +12,6 @@ import {add , remove , toggle} from "./Slice"
    const handleChange = (e) => {
       if (e.target.value !== "") {
           setNewTask(e.target.value);
-      } else {
-          alert("Enter the new task");
       }
 
 }
@@ -35,7 +33,19 @@ import {add , remove , toggle} from "./Slice"
 
      <ul>
            {tasks.map((t, i) => (
-             <li key={i}>{t}  <button onClick = {() => dispatch(remove(t))}>remove task</button></li>
+             <li key={i}  style={{
+                                  marginBottom: "6px",
+                                  display: "flex",
+                                  justifyContent: "space-between",
+                                  alignItems: "center",
+                                  padding: "6px 10px",
+                                }}>{t} <button onClick = {() => dispatch(remove(t))}  style={{
+                                                                                                color: "white",
+                                                                                                border: "none",
+                                                                                                padding: "20px 10px",
+                                                                                                borderRadius: "10px",
+                                                                                                cursor: "pointer"
+                                                                                              }}> remove task</button></li>
            ))}
      </ul>
      </>
